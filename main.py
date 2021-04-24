@@ -1,5 +1,7 @@
 import discord
 from discord.ext import commands
+import os
+from os import environ
 
 my_secret = os.environ['TOKEN']
 
