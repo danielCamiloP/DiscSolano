@@ -16,22 +16,17 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-  if message.author == client.user:
-    return
+    if message.author == client.user:
+      return
 
-  msg = message.content
+    msg = message.content
 
-  if msg.endswith("ano"):
-    await message.channel.send("manos en el ano")
+    if msg.endswith("ano"):
+        await message.channel.send("manos en el ano")
 
-  if msg.endswith("lmao"):
-    await message.channel.send("lmao")
+    if msg.endswith("lmao"):
+        await message.channel.send("lmao")
 
-
-@bot.event
-async def on_message(message):
-    if message.author == bot.user:
-        return
     if message.endswith("incineradas lmao"):
         emoji = get(bot.get_all_emojis(), name=':KEKW:')
         await bot.add_reaction(message, emoji)
