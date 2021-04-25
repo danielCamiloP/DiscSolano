@@ -27,8 +27,8 @@ async def on_message(message):
     if msg.endswith("lmao"):
         await message.channel.send("lmao")
 
-    if message.endswith("incineradas lmao"):
-        emoji = get(client.get_all_emojis(), name=':KEKW:')
-        await client.add_reaction(message, emoji)
+    if message.content.endswith("incineradas lmao"):
+        await message.add_reaction("<:KEKW:808869398642819072>")
+        await message.channel.send("lmao")
 
 client.run(my_secret)
