@@ -24,10 +24,8 @@ async def on_message(message):
     if msg.endswith("ano"):
         await message.channel.send("manos en el ano")
 
-    if msg.endswith("lmao"):
-        await message.channel.send("lmao")
-
     if message.content.endswith("incineradas lmao"):
         await message.add_reaction("<:KEKW:808869398642819072>")
+        await message.channel.send("lmao")
 
 client.run(my_secret)
