@@ -29,6 +29,6 @@ async def on_message(message):
 
     if message.content.endswith("incineradas lmao"):
         emoji = get(client.get_all_emojis(), name=':KEKW:')
-        await client.add_reaction(message, emoji)
+        await message.add_reaction("<:KEKW:808869398642819072>")
 
 client.run(my_secret)
