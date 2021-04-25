@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from discord.utils import get
 import os
 from os import environ
 
@@ -22,5 +23,17 @@ async def on_message(message):
 
   if msg.endswith("ano"):
     await message.channel.send("manos en el ano")
+
+  if msg.endswith("lmao"):
+    await message.channel.send("lmao")
+
+
+@bot.event
+async def on_message(message):
+    if message.author == bot.user:
+        return
+    if message.endswith("incineradas lmao"):
+        emoji = get(bot.get_all_emojis(), name=':KEKW:')
+        await bot.add_reaction(message, emoji)
 
 client.run(my_secret)
