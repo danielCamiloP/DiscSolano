@@ -27,7 +27,7 @@ async def on_message(message):
     if msg.endswith("lmao"):
         await message.channel.send("lmao")
 
-    if message.endswith("incineradas lmao"):
+    if message.content.endswith("incineradas lmao"):
         emoji = get(client.get_all_emojis(), name=':KEKW:')
         await client.add_reaction(message, emoji)
 
