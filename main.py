@@ -20,7 +20,7 @@ async def on_message(message):
     if message.author == client.user:
       return
 
-      msg = message.content
+    msg = message.content
 
     if message.content.endswith("ano"):
         await message.channel.send("manos en el ano")
