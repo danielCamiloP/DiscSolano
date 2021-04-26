@@ -30,4 +30,7 @@ async def on_message(message):
     if message.content.endswith("incineradas lmao"):
         await message.add_reaction("<:KEKW:808869398642819072>")
 
+    if "mongo" in message.content:
+        await message.add_reaction("<:mushroom:>")
+
 client.run(my_secret)
