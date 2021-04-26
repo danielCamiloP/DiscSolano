@@ -31,7 +31,7 @@ async def on_message(message):
     if message.content.endswith("incineradas lmao"):
         await message.add_reaction("<:KEKW:808869398642819072>")
 
-    if any(word in msg for word in sus_words):
+    if any(word in msg for word in sus_words) and "F4" not in msg:
         await message.add_reaction("🍄")
 
 client.run(my_secret)
