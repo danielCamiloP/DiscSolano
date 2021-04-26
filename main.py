@@ -22,10 +22,10 @@ async def on_message(message):
 
     msg = message.content.lower
 
-    if message.content.lower.endswith("ano"):
+    if message.content.endswith("ano"):
         await message.channel.send("manos en el ano")
 
-    if message.content.lower.endswith("lmao"):
+    if message.content.endswith("lmao"):
         await message.channel.send("lmao")
 
     if "incineradas lmao" in msg:
