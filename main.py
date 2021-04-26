@@ -8,6 +8,7 @@ my_secret = os.environ['TOKEN']
 
 client = commands.Bot(command_prefix=">")
 
+susWords = ["mong","sus","hongo", "mogus"]
 
 
 @client.event
@@ -30,7 +31,7 @@ async def on_message(message):
     if message.content.endswith("incineradas lmao"):
         await message.add_reaction("<:KEKW:808869398642819072>")
 
-    if "mongo" in message.content:
+    if any(word in susWords for word in msg):
         await message.add_reaction("🍄")
 
 client.run(my_secret)
