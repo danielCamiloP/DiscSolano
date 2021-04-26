@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from discord.utils import get
+import json
 import os
 from os import environ
 
@@ -20,12 +21,12 @@ async def on_message(message):
     if message.author == client.user:
       return
 
-    msg = message.content.lower
+    msg = message.content
 
-    if message.content.endswith("ano"):
+    if msg.endswith("ano"):
         await message.channel.send("manos en el ano")
 
-    if message.content.endswith("lmao"):
+    if msg.endswith("lmao"):
         await message.channel.send("lmao")
 
     if "incineradas lmao" in msg:
@@ -34,6 +35,6 @@ async def on_message(message):
     if any(word in msg for word in sus_words) and "F4" not in msg:
         await message.add_reaction("🍄")
 
-    if message.content.startswith('$daily'):
+    if msg.startswith('$daily'):
         await message.channel.send(">daily")
 client.run(my_secret)
