@@ -7,7 +7,7 @@ from os import environ
 
 my_secret = os.environ['TOKEN']
 
-client = commands.Bot(command_prefix=">")
+client = commands.Bot(command_prefix=">", case_insensitive=True)
 
 sus_words = ["mong","sus","hongo", "mogus"]
 
@@ -21,7 +21,7 @@ async def on_message(message):
     if message.author == client.user:
       return
 
-    msg = message.content
+    msg = message.content.lower()
 
     if msg.endswith("ano"):
         await message.channel.send("manos en el ano")
