@@ -32,7 +32,7 @@ async def on_message(message):
     if "incineradas lmao" in msg:
         await message.add_reaction("<:KEKW:808869398642819072>")
 
-    if any(word in msg for word in sus_words) and "F4" not in msg:
+    if any(word in msg for word in sus_words) and "f4" not in msg:
         await message.add_reaction("🍄")
 
     if msg.startswith('$daily'):
