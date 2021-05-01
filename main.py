@@ -39,7 +39,7 @@ async def on_message(message):
         await message.add_reaction("<:heart-1:549386842089193482>")
 
     if msg.startswith("$"):
-        botMsg = msg.substring(1:)
+        botMsg = msg[1:]
         await message.delete();
         await message.channel.send(botMsg)
 
