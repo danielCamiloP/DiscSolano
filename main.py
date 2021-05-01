@@ -35,6 +35,10 @@ async def on_message(message):
     if any(word in msg for word in sus_words) and "f4" not in msg:
         await message.add_reaction("🍄")
 
-    if msg.startswith('$daily'):
-        await message.channel.send(">daily")
+    if "panita" in msg:
+        await message.add_reaction("<:heart-1:549386842089193482>")
+
+    if msg.beginswith("$"):
+        await message.channel.send(msg);
+
 client.run(my_secret)
