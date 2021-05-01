@@ -39,6 +39,7 @@ async def on_message(message):
         await message.add_reaction("<:heart-1:549386842089193482>")
 
     if msg.startswith("$"):
-        await message.channel.send(msg);
+        await message.delete(msg)
+        await message.channel.send(msg)
 
 client.run(my_secret)
