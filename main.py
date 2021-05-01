@@ -38,7 +38,7 @@ async def on_message(message):
     if "panita" in msg:
         await message.add_reaction("<:heart-1:549386842089193482>")
 
-    if msg.beginswith("$"):
+    if msg.startswith("$"):
         await message.channel.send(msg);
 
 client.run(my_secret)
