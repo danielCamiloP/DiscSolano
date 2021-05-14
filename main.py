@@ -9,7 +9,7 @@ my_secret = os.environ['TOKEN']
 
 client = commands.Bot(command_prefix=">", case_insensitive=True)
 
-sus_words = ["mong","sus","hongo", "mogus"]
+sus_words = ["mong","sus","hongo", "mogus", "ඞ"]
 
 
 @client.event
