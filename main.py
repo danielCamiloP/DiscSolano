@@ -43,4 +43,20 @@ async def on_message(message):
         await message.delete();
         await message.channel.send(botMsg)
 
+async def on_reaction_add(reaction, user):
+    embed = reaction.embeds[0]
+    emoji = reaction.emoji
+
+    if user.bot:
+        return
+
+    if emoji == "emoji 1":
+        fixed_channel = bot.get_channel(channel_id)
+        await fixed_channel.send(embed=embed)
+
+        await message.add_reaction("🍄")
+
+    else:
+        return
+
 client.run(my_secret)
