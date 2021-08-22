@@ -42,7 +42,7 @@ async def on_message(message):
         await message.channel.send("No. Cringe")
 
     if msg.startswith("$437"):
-        botMsg = msg[1:]
+        botMsg = msg[4:]
         await message.delete();
         await message.channel.send(botMsg)
 
