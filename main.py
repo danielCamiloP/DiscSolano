@@ -45,13 +45,9 @@ async def on_message(message):
         await message.channel.send("No. Cringe")
 
     if msg.startswith("$437"):
-
-        if message.author.username.toLowerCase() == "Babato":
-            await message.channel.send('No lo intente zopenco');
-        else:
-            botMsg = msg[4:]
-            await message.delete();
-            await message.channel.send(botMsg)
+        botMsg = msg[4:]
+        await message.delete();
+        await message.channel.send(botMsg)
 
 async def on_reaction_add(reaction, user):
     embed = reaction.embeds[0]
