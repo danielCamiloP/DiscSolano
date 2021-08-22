@@ -38,6 +38,9 @@ async def on_message(message):
     if "panita" in msg:
         await message.add_reaction("<:heart-1:549386842089193482>")
 
+    if "league" in msg:
+        await message.channel.send("No. Cringe")
+
     if msg.startswith("$"):
         botMsg = msg[1:]
         await message.delete();
