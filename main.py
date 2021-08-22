@@ -11,6 +11,9 @@ client = commands.Bot(command_prefix=">", case_insensitive=True)
 
 sus_words = ["mong","sus","hongo", "mogus", "ඞ"]
 
+const arrayOfUsersNames = ['Babato'];
+
+
 
 @client.event
 async def on_ready():
@@ -42,6 +45,9 @@ async def on_message(message):
         await message.channel.send("No. Cringe")
 
     if msg.startswith("$437"):
+        for (let i = 0; i < arrayOfUsersNames.length; i++) {
+            if (message.author.username.toLowerCase() === arrayOfUsersNames[i].toLowerCase()) return message.reply('No lo intente zopenco');
+        };
         botMsg = msg[4:]
         await message.delete();
         await message.channel.send(botMsg)
