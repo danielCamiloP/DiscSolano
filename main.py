@@ -11,7 +11,7 @@ client = commands.Bot(command_prefix=">", case_insensitive=True)
 
 sus_words = ["mong","sus","hongo", "mogus", "ඞ"]
 
-const arrayOfUsersNames = ['Babato'];
+arrayOfUsersNames = ['Babato'];
 
 
 
