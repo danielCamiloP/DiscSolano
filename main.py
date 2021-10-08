@@ -50,7 +50,6 @@ async def on_message(message):
         await msg.channel.send(botMsg)
 
     if msg.startswith("$suavemente"):
-        await msg.delete()
         await message.channel.send("https://i.4cdn.org/v/1633653527766.gif")
 
 async def on_reaction_add(reaction, user):
