@@ -50,7 +50,7 @@ async def on_message(message):
         await msg.channel.send(botMsg)
 
     if "suave" in msg:
-        await message.channel.send("https://i.4cdn.org/v/1633653527766.gif")
+        await message.channel.send("https://cdn.discordapp.com/attachments/149339435220074497/912107581542129704/undefined_-_Imgur.gif")
 
 async def on_reaction_add(reaction, user):
     embed = reaction.embeds[0]
